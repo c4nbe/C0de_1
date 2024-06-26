@@ -275,9 +275,10 @@ function drawShape(ctx, shape, time) {
     ctx.restore();
 }
 
+
 function animateShapes(ctx, shapes, width, height, time) {
     // Create a fading effect by drawing a semi-transparent rectangle over the entire canvas
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.09)'; // Adjust alpha value for longer or shorter trails
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Adjust alpha value for longer or shorter trails
     ctx.fillRect(0, 0, width, height);
 
     // Change background color every tick
