@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Social Media</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="new-post">
+            <h2>Create Post</h2>
+            <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+            <button id="postButton">Post</button>
+        </section>
+        <section class="posts">
+            <h2>Posts</h2>
+            <div class="post" id="postTemplate">
+                <div class="post-content"></div>
+                <div class="post-actions">
+                    <button class="like-button">Like</button>
+                    <button class="comment-button">Comment</button>
+                </div>
+                <div class="comments-section"></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
