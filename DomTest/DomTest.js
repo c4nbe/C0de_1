@@ -6,3 +6,4 @@ newSpan.textContent = "swag";
 document.body.appendChild(newSpan);
 newSpan.style.backgroundColor = "blue";
 console.log(newSpan);
+//# sourceMappingURL=DomTest.js.map

@@ -28,3 +28,4 @@ function deleteLetter(_event) {
     let parent = target.parentNode;
     parent.removeChild(target);
 }
+//# sourceMappingURL=BlackMailerCompanion.js.map

@@ -1,4 +1,4 @@
-// Perlin noise implementation (simple 1D noise for demonstration)
+// Perlin noise
 class PerlinNoise {
     constructor() {
         this.permutation = this.generatePermutation();
@@ -69,13 +69,13 @@ function createRandomShape(width, height) {
 
 function checkCollision(shape1, shape2) {
     if (shape1.type === 1 && shape2.type === 1) {
-        // Circle-Circle Collision
+        // Circle Collision
         const dx = shape2.x - shape1.x;
         const dy = shape2.y - shape1.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         return distance < (shape1.size / 2 + shape2.size / 2);
     } else {
-        // Simple AABB (Axis-Aligned Bounding Box) Collision for rectangles and mixed shapes
+        //Collision for rectangles and shapes
         const rect1 = {
             x: shape1.x - shape1.size / 2,
             y: shape1.y - shape1.size / 2,
