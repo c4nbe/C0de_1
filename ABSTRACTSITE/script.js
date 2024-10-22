@@ -62,7 +62,7 @@ function createRandomShape(width, height) {
     const targetColor = getRandomColor();
     const pulseSpeed = Math.random() * 0.02 + 0.01; // Random speed between 0.01 and 0.03
     const mass = size; // Mass proportional to size
-    const elasticity = 0.9; // Bounce factor
+    const elasticity = 5000; // Bounce factor
 
     return { x, y, size, color, type, angle, rotationSpeed, targetType, shapeShiftProgress, shapeShiftSpeed, vx, vy, colorChangeProgress, colorChangeSpeed, targetColor, pulseSpeed, mass, elasticity };
 }
@@ -163,7 +163,7 @@ function animateShapes(ctx, shapes, width, height, time) {
         shape.vy += (dy / distance) * force;
 
         // Apply a rotational force for spiraling effect
-        const spiralStrength = 0.05; // Adjust this value to control the spiraling effect
+        const spiralStrength = 0.5; // Adjust this value to control the spiraling effect
         const angle = Math.atan2(dy, dx);
         shape.vx += Math.cos(angle + Math.PI / 2) * spiralStrength;
         shape.vy += Math.sin(angle + Math.PI / 2) * spiralStrength;
@@ -325,11 +325,11 @@ function animateShapes(ctx, shapes, width, height, time) {
         }
         if (shape.y < -shape.size) {
             shape.y = height + shape.size;
-            shape.vy *= 0.5; // Reduce velocity to prevent shooting across the screen
+            shape.vy *= 0.0005; // Reduce velocity to prevent shooting across the screen
         }
         if (shape.y > height + shape.size) {
             shape.y = -shape.size;
-            shape.vy *= 0.5; // Reduce velocity to prevent shooting across the screen
+            shape.vy *= 0.0005; // Reduce velocity to prevent shooting across the screen
         }
 
         if (shape.shapeShiftProgress >= 1) {
